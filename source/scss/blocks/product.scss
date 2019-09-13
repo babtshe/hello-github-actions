@@ -1,0 +1,257 @@
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: $media-mobile;
+  margin-bottom: 12px;
+}
+
+.product__image-wrapper {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.product__image {
+  display: block;
+}
+
+.product__description {
+  flex: 1 0 140px;
+}
+
+.product__name {
+  font-family: $font-stack;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #111111;
+  margin: 21px 0 12px 0;
+  width: 100px;
+
+  &--accessories {
+    margin: 12px 0 10px 0;
+  }
+}
+
+.product__properties-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &--accessories {
+    margin-top: 8px;
+    margin-bottom: 15px;
+  }
+}
+
+.product__property-name {
+  flex: 0 0 50%;
+  font-size: 12px;
+  line-height: 16px;
+
+  &--accessories {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.product__property-value {
+  margin: 0;
+  text-align: right;
+  flex: 0 0 50%;
+  font-size: 12px;
+  line-height: 16px;
+
+  &--accessories {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.product__order-btn {
+  flex: 1 0 100%;
+
+  @include button-default(16px);
+  padding: 10px 0;
+}
+
+@media (min-width: $media-tablet) {
+  .product {
+    max-width: 100%;
+    min-height: 571px;
+    padding-top: 140px;
+    background-color: #f2f2f2;
+    background-clip: content-box;
+    margin-bottom: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .product__image-wrapper {
+    width: 325px;
+    height: 208px;
+    margin-top: -81px;
+    margin-bottom: -18px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .product__description {
+    flex: 0 0;
+    width: 249px;
+    min-height: 226px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product__name {
+    font-size: 20px;
+    width: 135px;
+    text-align: center;
+    margin: 55px 0 12px 0;
+  }
+
+  .product__properties-list {
+    width: 249px;
+    margin-top: 7px;
+  }
+
+  .product__property-name {
+    font-size: 16px;
+    border-bottom: 1px solid #cdcdcd;
+    padding: 8px 0 7px;
+  }
+
+  .product__property-value {
+    font-size: 16px;
+    border-bottom: 1px solid #cdcdcd;
+    padding: 8px 0 7px;
+  }
+
+  .product__order-btn {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 249px;
+    margin-top: 17px;
+    margin-bottom: 40px;
+    min-height: 40px;
+    order: 2;
+  }
+
+  .product--accessory {
+    min-height: 138px;
+    padding: 27px 37px;
+    background-color: transparent;
+    outline: 1px solid #e6e6e6;
+  }
+
+  .product__description--accessory {
+    min-height: 27px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .product__name--accessories {
+    margin: -1px 0 0 2px;
+    width: auto;
+  }
+
+  .product__properties-list--accessories {
+    margin: 0;
+    width: 287px;
+    justify-content: flex-end;
+  }
+
+  .product__property-name--accessories {
+    border-bottom: none;
+    text-align: right;
+    padding: 6px 0 7px;
+  }
+
+  .product__property-value--accessories {
+    border-bottom: none;
+    flex-basis: 95px;
+    padding: 6px 0 7px;
+  }
+
+  .product__order-btn--accessories {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $media-desktop) {
+  .product__image-wrapper {
+    width: 245px;
+    height: 206px;
+  }
+
+  .product__properties-list {
+    width: 169px;
+  }
+
+  .product__order-btn {
+    width: 169px;
+    flex-grow: 0;
+  }
+
+  .product__description {
+    width: 245px;
+  }
+
+
+  .product__description--accessory {
+    justify-content: flex-start;
+    flex-basis: 630px;
+    margin-right: 20px;
+  }
+
+  .product__properties-list--accessories {
+    justify-content: space-between;
+    width: 307px;
+  }
+
+  .product--accessory {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 895px;
+    flex-direction: row;
+    padding: 0;
+    height: 70px; //ie hack
+    min-height: 71px;
+    outline: 0;
+  }
+
+  .product__name--accessories {
+    flex-basis: 285px;
+    margin-top: 3px;
+    margin-right: 38px;
+    text-align: left;
+  }
+
+  .product__property-name--accessories {
+    text-align: left;
+    flex-basis: 245px;
+    margin-top: 10px;
+    padding: 0;
+  }
+
+  .product__property-value--accessories {
+    flex-basis: 60px;
+    text-align: left;
+    margin-top: 10px;
+    padding: 0;
+  }
+
+  .product__order-btn--accessories {
+    flex-basis: 245px;
+    margin-top: -2px;
+  }
+}
