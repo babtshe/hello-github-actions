@@ -1,0 +1,54 @@
+<footer class="page__footer">
+  <section class="contacts">
+    <div class="contacts__wrapper{{#if index-page}} contacts__wrapper--index{{/if}}">
+      <h2 class="contacts__title visually-hidden">Контакты</h2>
+      <p class="contacts__slogan">приглашаем к&nbsp;сотрудничеству дилеров!</p>
+      <address class="contacts__address">ул. Большая Конюшенная, д. 19/8
+        <span class="contacts__city">Санкт-Петербург</span>
+      </address>
+    </div>
+    <div class="contacts__map">
+    </div>
+  </section>
+  <div class="page__footer-row">
+    <div class="logo logo--footer">
+      <a{{#unless index-page}} href="index.html" {{/unless}} class="logo__link logo__link--footer">
+        <img src="./img/logo-footer.svg" alt="Cat Energy" width="128" height="24">
+      </a>
+    </div>
+    <ul class="social-list">
+      <li class="social-list__item">
+        <a href="#" class="social-list__link social-list__link--vk">
+          <span class="visually-hidden">ВКонтакте</span>
+          {{> svginline icon-vk-mobile="true" class="social-list__image social-list__image--mobile"}}
+          {{> svginline icon-vk="true" class="social-list__image social-list__image--default"}}
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a href="#" class="social-list__link social-list__link--instagram">
+          <span class="visually-hidden">Инстаграм</span>
+          {{> svginline icon-insta-mobile="true" class="social-list__image social-list__image--mobile"}}
+          {{> svginline icon-insta="true" class="social-list__image social-list__image--default"}}
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a href="#" class="social-list__link social-list__link--facebook">
+          <span class="visually-hidden">Фейсбук</span>
+          {{> svginline icon-fb-mobile="true" class="social-list__image social-list__image--mobile"}}
+          {{> svginline icon-fb="true" class="social-list__image social-list__image--default"}}
+        </a>
+      </li>
+    </ul>
+    <div class="credits">
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="credits__link">
+        <p class="credits__text">HTML Academy</p>
+      </a>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="credits__link">
+        {{> svginline credits-logo="true" class="credits__logo"}}
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+
